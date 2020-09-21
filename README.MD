@@ -1,9 +1,11 @@
 # Norge roforbund nettside og database
 
-## Git clone eller fork
-Før du begynner må du clone prosjektet ned lokalt.
-Enten kan du direkte clone mitt prosjekt eller forke det (anbefales) ved å trykke på fork i høyre marg. 
-Ved å forke får du en direkte kopi av mitt repository, bare at det er ditt eget
+## Last ned prosjektet
+Når du åpner IntelliJ, vil du få opp en knapp hvor det står `Check out from Version Control` 
+eller `Get from Version Control`. Start med å trykke på den. IntelliJ
+skal deretter spørre om en url. Der limer du inn:
+
+`https://github.com/JohanSvartdal/Roforbund`
 
 
 ## Hvordan kjøre prosjektet?
