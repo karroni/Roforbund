@@ -1,0 +1,78 @@
+a {
+    text-decoration: none;
+
+}
+body {
+    background-image: url('images/background_main.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#loginBox {
+    background-color: white;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-top: 300px;
+    padding: 20px;
+    box-shadow: 0px 10px 20px #222222;
+    text-align: center;
+
+    border-radius: 20px;
+}
+
+#loginBox h1 {
+    font-size: 40px;
+    margin-top: 0px;
+    font-weight: 200;
+}
+
+#loginBox h2 {
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+#loginButton {
+    margin-top: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: #00AAAA;
+    font-size: 18px;
+    border-radius: 20px;
+    border-width: 0px;
+    color: white;
+    box-shadow: 0px 2px 4px #AAAAAA;
+
+    transition: ease 0.2s;
+}
+
+#loginButton:hover {
+    background-color: #008888;
+    cursor: pointer;
+
+    padding-left: 44px;
+    padding-right: 44px;
+
+    box-shadow: 0px 4px 4px #AAAAAA;
+}
+
+.textField {
+    width: 580px;
+    margin-top: 0px;
+
+    padding: 10px;
+    border-radius: 20px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: gray;
+    font-size: 15px;
+
+    text-align: center;
+
+    box-shadow: 0px 2px 4px #AAAAAA;
+}
