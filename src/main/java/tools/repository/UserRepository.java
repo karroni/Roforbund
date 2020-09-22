@@ -198,7 +198,8 @@ public class UserRepository {
         return toReturn;
     }
 
-    public static String getUserName(String username) {
+    //Tenkte å endre denne til 'isUserAuthenticated', hvor programmet sjekker om brukeren er authenticated
+    public static String getUserPassword(String username) {
         Connection db = null;
         PreparedStatement prepareStatement = null;
 

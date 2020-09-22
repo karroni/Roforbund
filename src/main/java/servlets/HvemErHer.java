@@ -37,9 +37,16 @@ public class HvemErHer extends AbstractAppServlet {
 
         ArrayList<ArrayList<String>> profiles = UserRepository.getAllMembers(1, out);
 
+        out.println("<form action = 'LeggTilOvelser' method='POST'>");
+
         for (int i = 0; i < profiles.size(); i++) {
             out.println("<h2>" + profiles.get(i).get(1) + " " + profiles.get(i).get(2) + "</h2>");
+            out.println("<input type='checkbox' name='personCheck' id = '" + profiles.get(i).get(1) + "Box'>");
         }
+        out.println("<br/>");
+        out.println("<input type='submit' class = 'smallButton' value = 'Gå videre'>");
+
+        out.println("</form>");
 
 
 

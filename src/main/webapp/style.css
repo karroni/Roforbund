@@ -35,7 +35,7 @@ body {
     margin-top: 20px;
 }
 
-#loginButton {
+.smallButton {
     margin-top: 20px;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -51,7 +51,7 @@ body {
     transition: ease 0.2s;
 }
 
-#loginButton:hover {
+.smallButton:hover {
     background-color: #008888;
     cursor: pointer;
 

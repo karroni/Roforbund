@@ -1,6 +1,5 @@
 package servlets;
 
-import models.UserModel;
 import tools.repository.UserRepository;
 
 import javax.servlet.ServletException;
@@ -22,7 +21,7 @@ public class CheckLogin extends AbstractAppServlet {
         String userName = request.getParameter("uname");
         String password = request.getParameter("password");
 
-        String passwordFromDB = UserRepository.getUserName(userName);
+        String passwordFromDB = UserRepository.getUserPassword(userName);
 
         if (passwordFromDB.equals(password)) {
             int userID = UserRepository.getInt("otra.users", "User_email", userName, "User_id");

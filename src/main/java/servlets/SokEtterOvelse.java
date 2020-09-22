@@ -1,55 +1,45 @@
 package servlets;
 
-import models.UserModel;
-import tools.repository.UserRepository;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
 
-@WebServlet(name= "UtoverDash", urlPatterns = {"/UtoverDash"})
-public class UtoverDash extends AbstractAppServlet {
+@WebServlet(name= "LeggTilOvelser", urlPatterns = {"/LeggTilOvelser"})
+public class SokEtterOvelse extends AbstractAppServlet {
 
     int UID = 1;
 
     @Override
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
-        writeResponse(request, response, "Dashboard!");
+        writeResponse(request, response, "Legg til ovelser");
     }
 
     @Override
     protected void writeBody(HttpServletRequest req, PrintWriter out) {
         out.println("<html>");
-        out.println("<head><title>Mine resultater</title>");
+        out.println("<head><title>Hvem er her?</title>");
         out.println("<link rel='stylesheet' href='style.css'>");
         out.println("</head>");
         out.println("<body>");
 
 
         out.println("<div id = 'loginBox'>");
-        out.println("<h1>Velg kategori</h1>");
-
-
-        Cookie[] ck = req.getCookies();
-        for(int i=0;i<ck.length;i++) {
-            if (ck[i].getName().equals("UID")) {
-                UID = Integer.parseInt(ck[i].getValue());
-            }
-        }
-
-        String[] cats = UserRepository.getAllCats(UID, out);
-
-        for (int i = 0; i < cats.length; i++) {
-            out.println("<div id = 'loginButton'>" + cats[i] + "</div>");
-        }
+        out.println("<h1>Søk etter øvelse</h1>");
+        out.println("<form action = 'RegistrerResultater' method = 'POST'>");
+        out.println("<input type = 'text' name = 'ovelsesName' class = 'textField' placeholder = 'Søk etter øvelse'/>");
+        out.println("</form>");
+        out.println("</br>");
+        out.println("</br>");
+        out.println("<button class = 'smallButton'>Gå videre</button>");
 
         out.println("</div>");
+
+
     }
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
