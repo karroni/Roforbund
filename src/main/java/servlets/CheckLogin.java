@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 
-@WebServlet(name= "CheckLogin", urlPatterns = {"/CheckLogin"})
+@WebServlet(name= "CheckLogin", urlPatterns = {"/login/CheckLogin"})
 public class CheckLogin extends AbstractAppServlet {
 
     @Override
@@ -28,15 +28,16 @@ public class CheckLogin extends AbstractAppServlet {
             int userID = UserRepository.getInt("otra.users", "User_email", userName, "User_id");
             Cookie ck=new Cookie("UID",String.valueOf(userID));//deleting value of cookie
             ck.setMaxAge(2700000);//changing the maximum age to 0 seconds
+            ck.setPath("/");
             response.addCookie(ck);
 
             Integer userRole = UserRepository.getInt("otra.users", "User_email", userName, "User_role");
             if (userRole == 0) {
-                response.sendRedirect("UtoverDash");
+                response.sendRedirect("../UtoverDash");
             }else if (userRole == 1) {
-                response.sendRedirect("TrenerDash");
+                response.sendRedirect("../TrenerDash");
             }else if (userRole == 2) {
-                response.sendRedirect("UtoverDash");
+                response.sendRedirect("../UtoverDash");
             }
         }
     }

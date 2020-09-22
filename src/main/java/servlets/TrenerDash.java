@@ -37,6 +37,10 @@ public class TrenerDash extends AbstractAppServlet {
 
         out.println("<a href = 'HvemErHer'><div id = 'loginButton'>Ny test</div></a>");
         out.println("<div id = 'loginButton'>Se tidligere tester</div>");
+        out.println("<form>");
+        out.println("<input type = 'text' name = 'uname' id = 'uname' class = 'textField' value = 'root'/>");
+        out.println("<input type = 'submit' />");
+        out.println("</form>");
 
         out.println("</div>");
 
