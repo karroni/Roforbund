@@ -4,6 +4,7 @@
 #lager databasen om den ikke finnes. navnet er bare tilfeldig.
 CREATE DATABASE if not EXISTS otra;
 
+# hei
 
 #denne må dere kjøre for at skript filen skal skjønne at
 # <otra> er databasen dere vil lage tables og inserte data i.
